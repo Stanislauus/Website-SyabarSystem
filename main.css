@@ -1,0 +1,901 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+html, body{
+    scroll-behavior: smooth;
+    min-height: 100%;
+    margin: 0;
+}
+*{
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+.adaptive{
+    display: grid;
+    grid-template-rows: 70px 5fr 0.5fr 70px;
+    row-gap: 0;
+    min-height: 100%;
+}
+
+
+.header{
+    padding: 0 8vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: white;
+    border-bottom: 2px solid darkgreen;
+}
+.header .logo img{
+    height: 68px;
+}
+.header .menu{
+    display: flex;
+    align-items: center;
+}
+.menu .menu-list{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
+.header a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    
+}
+.header a:hover{
+    text-decoration: underline;
+}
+
+
+.main{
+    display: grid;
+    grid-template-rows: 1.4fr 1.05fr 1fr 1fr;
+}
+
+.main-first{
+    border-bottom: 2px solid darkgreen;
+    background: url(pictures/first.png) no-repeat;
+    background-size: cover;
+    padding: 40px 8vw;
+    background-attachment: fixed;
+}
+.main-first .about{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    color: black;
+}
+.main-first .about h1{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+.main-first .about p{
+    font-size: 19px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+}
+.main-first .advantages{
+    color: black;
+}
+.advantages h1{
+    font-size: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.advantages .columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.advantages .columns .column div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+.advantages .columns .column div p:nth-child(1){
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 15px;
+    background-color: darkgreen;
+}
+.advantages .columns .column div p:nth-child(2){
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.main-second{
+    background-color: white;
+    padding: 30px 8vw;
+    color: black;
+    border-bottom: 2px solid darkgreen;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-second h1{
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.main-second .grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 10px;
+}
+.grid div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+.grid div img{
+    width: 50px;
+    height: 50px;
+}
+.grid div p{
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.main-third{
+    border-bottom: 2px solid darkgreen;
+    background: url(pictures/third.png) no-repeat;
+    background-size: cover;
+    padding: 40px 8vw;
+    background-attachment: fixed;
+}
+.main-third .services{
+    color: black;
+}
+.services h1{
+    font-size: 35px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.services .columns{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5vw;
+}
+.services .columns .column div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.services .columns .column div p:nth-child(1){
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    min-height: 30px;
+    min-width: 30px;
+    border-radius: 15px;
+    background-color: darkgreen;
+}
+.services .columns .column div p:nth-child(2){
+    font-size: 19px;
+    font-weight: 400;
+}
+
+.main-fourth{
+    background-color: white;
+    border-bottom: 2px solid darkgreen;
+    padding: 30px 8vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 18vw;
+}
+.main-fourth .contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.main-fourth .contacts h1{
+    font-size: 35px;
+    margin-bottom: 30px;
+}
+.main-fourth .contacts .contact{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.main-fourth .contact div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+}
+.main-fourth .contact div img{
+    width: 55px;
+    height: 55px;
+}
+.main-fourth .contact div p{
+    font-size: 17px;
+    font-weight: 600;
+}
+.main-fourth .connection{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.connection h1{
+    font-size: 35px;
+}
+.connection p{
+    font-size: 18px;
+    font-weight: 500;
+}
+.connection .form{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 15px;
+}
+.connection .form input{
+    cursor: pointer;
+    font-size: 17px;
+    width: 215px;
+    height: 45px;
+    border-radius: 25px;
+    padding: 0 15px;
+    border: 2px solid black;
+}
+textarea{
+    cursor: pointer;
+    font-size: 17px;
+    width: 460px;
+    height: 100px;
+    border-radius: 30px;
+    border: 2px solid black;
+    padding: 15px 20px;
+    resize: none;
+}
+.connection div button{
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    background-color: rgba(57, 138, 98, 1);
+    border: 0;
+    width: 200px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+.connection div button:hover{
+    background-color: rgb(27, 126, 76);
+}
+.connection div button:active{
+    background-color: rgb(21, 107, 64);
+}
+
+
+.footer{
+    background-color: white;
+    padding: 20px 8vw;
+    border-bottom: 2px solid darkgreen;
+}
+.footer .footer-first{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 16vw;
+}
+.footer-first .company{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.footer-first .company p{
+    font-size: 17px;
+    margin: 0;
+}
+.footer-first .contacts{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.footer-first .contacts h2{
+    margin-bottom: 5px;
+}
+.footer-first .contacts .contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+}
+.footer-first .contacts .contact div{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.footer-first .contacts .contact div img{
+    width: 30px;
+    height: 30px;
+}
+.footer-first .contacts .contact div img:hover{
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.2);
+}
+.footer-first .contacts .contact div p{
+    font-size: 15px;
+    font-weight: 500;
+}
+.footer-first .contacts .contact div p:hover{
+    color: rgba(57, 138, 98, 1);
+}
+.footer-first .nav{
+    display: flex;
+    flex-direction: column;
+}
+.footer-first .nav div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.footer-first .nav div a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+.footer-first .nav div a:hover{
+    color: rgba(57, 138, 98, 1);
+}
+
+
+.footer-second{
+    background-color: rgba(96, 100, 102, 1);
+    padding: 0 8vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.footer-second p{
+    font-size: 17px;
+    color: white;
+}
+
+@media (min-width: 1200px) { 
+}
+@media (min-width: 1000px) and (max-width: 1199px){
+    
+    .header{
+        padding: 0 5vw;
+    }
+    .main-first{
+        padding: 30px 5vw;
+    }
+    .main-first .about p{
+        font-size: 18px;
+        line-height: 35px;
+    }
+    .advantages .columns .column div{
+        gap: 18px;
+    }
+    .advantages .columns .column div p:nth-child(1){
+        width: 28px;
+        height: 28px;
+        max-width: 28px;
+        max-height: 28px;
+        min-height: 28px;
+        min-width: 28px;
+        border-radius: 14px;
+    }
+    .advantages .columns .column div p:nth-child(2){
+        font-size: 18px;
+    }
+
+    .main-second{
+        padding: 20px 5vw;
+    }
+    .main-second h1{
+        margin-bottom: 30px;
+    }
+    .grid div{
+        gap: 10px;
+    }
+    .grid div img{
+        width: 45px;
+        height: 45px;
+    }
+    .grid div p{
+        font-size: 18px;
+    }
+
+    .main-third{
+        padding: 30px 5vw;
+    }
+    .services h1{
+        margin-bottom: 20px;
+    }
+    .services .columns{
+        gap: 2vw;
+    }
+    .services .columns .column div{
+        gap: 10px;
+    }
+    .services .columns .column div p:nth-child(1){
+        width: 28px;
+        height: 28px;
+        max-width: 28px;
+        max-height: 28px;
+        min-height: 28px;
+        min-width: 28px;
+        border-radius: 14px;
+    }
+    .services .columns .column div p:nth-child(2){
+        font-size: 18px;
+    }
+
+    .main-fourth{
+        padding: 20px 5vw;
+        column-gap: 12vw;
+    }
+    .main-fourth .contacts h1{
+        margin-bottom: 20px;
+    }
+    .main-fourth .contacts .contact{
+        gap: 30px;
+    }
+    .main-fourth .contact div{
+        gap: 15px;
+    }
+    .main-fourth .contact div img{
+        width: 40px;
+        height: 40px;
+    }
+    .main-fourth .contact div p{
+        font-size: 16px;
+    }
+    .connection p{
+        font-size: 17px;
+    }
+    .connection .form{
+        margin-top: 15px;
+        margin-bottom: 20px;
+        column-gap: 20px;
+    }
+    .connection .form input{
+        cursor: pointer;
+        font-size: 16px;
+        width: 21vw;
+        height: 45px;
+    }
+    textarea{
+        cursor: pointer;
+        font-size: 16px;
+        width: 44vw;
+        height: 100px;
+    }
+    .connection div button{
+        font-size: 17px;
+    }
+    .connection div button:hover{
+        background-color: rgb(27, 126, 76);
+    }
+    .connection div button:active{
+        background-color: rgb(21, 107, 64);
+    }
+
+    .footer{
+        background-color: white;
+        padding: 10px 5vw;
+    }
+    .footer .footer-first{
+        gap: 12vw;
+    }
+    .footer-first .company p{
+        font-size: 16px;
+    }
+    .footer-first .nav div a{
+        font-size: 17px;
+    }
+    .footer-second{
+        padding: 0 5vw;
+    }
+    .footer-second p{
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 999px){
+    .header{
+        padding: 0 4vw;
+    }
+    .main-first{
+        padding: 20px 4vw;
+    }
+    .main-first .about p{
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .advantages .columns .column div{
+        gap: 18px;
+    }
+    .advantages .columns .column div p:nth-child(1){
+        width: 26px;
+        height: 26px;
+        max-width: 26px;
+        max-height: 26px;
+        min-height: 26px;
+        min-width: 26px;
+        border-radius: 13px;
+    }
+    .advantages .columns .column div p:nth-child(2){
+        font-size: 17px;
+    }
+
+    .main-second{
+        padding: 15px 4vw;
+    }
+    .main-second h1{
+        margin-bottom: 20px;
+    }
+    .grid div{
+        gap: 10px;
+    }
+    .grid div img{
+        width: 40px;
+        height: 40px;
+    }
+    .grid div p{
+        font-size: 17px;
+    }
+
+    .main-third{
+        padding: 20px 4vw;
+    }
+    .services h1{
+        margin-bottom: 15px;
+    }
+    .services .columns{
+        gap: 2vw;
+    }
+    .services .columns .column div{
+        gap: 10px;
+    }
+    .services .columns .column div p:nth-child(1){
+        width: 26px;
+        height: 26px;
+        max-width: 26px;
+        max-height: 26px;
+        min-height: 26px;
+        min-width: 26px;
+        border-radius: 13px;
+    }
+    .services .columns .column div p:nth-child(2){
+        font-size: 17px;
+    }
+
+    .main-fourth{
+        padding: 20px 4vw;
+        column-gap: 12vw;
+    }
+    .main-fourth .contacts h1{
+        margin-bottom: 15px;
+    }
+    .main-fourth .contacts .contact{
+        gap: 20px;
+    }
+    .main-fourth .contact div{
+        gap: 10px;
+    }
+    .main-fourth .contact div img{
+        width: 40px;
+        height: 40px;
+    }
+    .main-fourth .contact div p{
+        font-size: 15px;
+    }
+    .connection p{
+        font-size: 16px;
+    }
+    .connection .form{
+        margin-top: 10px;
+        margin-bottom: 20px;
+        column-gap: 20px;
+    }
+    .connection .form input{
+        font-size: 15px;
+        width: 21vw;
+        height: 45px;
+    }
+    textarea{
+        font-size: 15px;
+        width: 44vw;
+        height: 100px;
+    }
+    .connection div button{
+        font-size: 16px;
+    }
+
+    .footer{
+        background-color: white;
+        padding: 10px 4vw;
+    }
+    .footer .footer-first{
+        gap: 8vw;
+    }
+    .footer-first .company p{
+        font-size: 15px;
+    }
+    .footer-first .nav div a{
+        font-size: 16px;
+    }
+    .footer-second{
+        padding: 0 4vw;
+    }
+    .footer-second p{
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px){
+    .adaptive{
+        display: grid;
+        grid-template-rows: 105px 5fr 0.5fr 70px;
+        row-gap: 0;
+        min-height: 100%;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 1vw;
+    }
+    .header .logo img{
+        width: 185px;
+        height: 73px;
+    }
+    .header .menu{
+        display: flex;
+        align-items: center;
+    }
+    .menu .menu-list{
+        display: flex;
+        flex-direction: row;
+        gap: 2vw;
+    }
+    .header a{
+        font-size: 14px;
+    }
+
+    .main{
+        display: grid;
+        grid-template-rows: 1.1fr 0.8fr 0.8fr 1fr;
+    }
+
+    .main-first{
+        padding: 15px 4vw;
+    }
+    .main-first .about h1{
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+    .main-first .about p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .advantages h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .advantages .columns{
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+    .advantages .columns .column div{
+        gap: 18px;
+    }
+    .advantages .columns .column div p:nth-child(1){
+        width: 26px;
+        height: 26px;
+        max-width: 26px;
+        max-height: 26px;
+        min-height: 26px;
+        min-width: 26px;
+        border-radius: 13px;
+    }
+    .advantages .columns .column div p:nth-child(2){
+        font-size: 16px;
+    }
+
+    .main-second{
+        padding: 15px 4vw;
+    }
+    .main-second h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .main-second .grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 5px;
+    }
+    .grid div{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+    .grid div img{
+        width: 40px;
+        height: 40px;
+    }
+    .grid div p{
+        font-size: 16px;
+    }
+
+    .main-third{
+        padding: 15px 4vw;
+    }
+    .services h1{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .services .columns{
+        display: flex;
+        flex-direction: column;
+        gap: 2vw;
+    }
+    .services .columns .column div{
+        gap: 10px;
+    }
+    .services .columns .column div p:nth-child(1){
+        width: 26px;
+        height: 26px;
+        max-width: 26px;
+        max-height: 26px;
+        min-height: 26px;
+        min-width: 26px;
+        border-radius: 13px;
+    }
+    .services .columns .column div p:nth-child(2){
+        font-size: 16px;
+    }
+
+    .main-fourth{
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 20px 4vw;
+    }
+    .main-fourth .contacts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-fourth .contacts h1{
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    .main-fourth .contacts .contact{
+        gap: 15px;
+    }
+    .main-fourth .contact div{
+        gap: 10px;
+    }
+    .main-fourth .contact div img{
+        width: 35px;
+        height: 35px;
+    }
+    .main-fourth .contact div p{
+        font-size: 14px;
+    }
+    .main-fourth .connection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .connection h1{
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    .connection p{
+        font-size: 15px;
+    }
+    .connection .form{
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 15px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        column-gap: 20px;
+    }
+    .connection .form input{
+        font-size: 14px;
+        width: 80vw;
+        height: 50px;
+    }
+    textarea{
+        font-size: 14px;
+        width: 80vw;
+        height: 110px;
+    }
+    .connection .button-content{
+        width: 85%;
+        display: flex;
+        justify-content: flex-start;
+    }
+    .connection div button{
+        width: 220px;
+        border-radius: 25px;
+        padding: 15px 15px;
+        font-size: 17px;
+    }
+
+    .footer{
+        background-color: white;
+        padding: 10px 4vw;
+    }
+    .footer .footer-first{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        
+    }
+    .footer-first .company{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-first .company p{
+        font-size: 14px;
+        text-align: center;
+    }
+    .footer-first .contacts{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer-first .contacts .contact{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+    .footer-first .contacts .contact div p{
+        font-size: 14px;
+    }
+    .footer-first .nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-first .nav div a{
+        font-size: 15px;
+    }
+    .footer-second{
+        padding: 0 4vw;
+    }
+    .footer-second p{
+        font-size: 15px;
+    }
+    .footer-first .nav div a{
+        font-size: 16px;
+    }
+}
